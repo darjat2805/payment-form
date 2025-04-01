@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <style>
+        body {
+    background-color: rgb(204, 219, 214);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 30px;
+    text-align: center;
+    margin-top  : 30px;
+}
+
+.form {
+    background-color: rgb(26, 177, 145);
+    text-align: left;
+    max-width: 500px;
+    padding: 20px;                
+    border-radius: 20px;         
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    border: 2px solid #1a9f91;    
+    transition: transform 0.3s ease; 
+}
+
+.form:hover {
+    transform: scale(1.05);
+}
+
+.legend {
+    text-align: left;
+}
+
+#sub {
+    display: block;    
+    margin: 0 auto;    /* Auto margins center the button horizontally */
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #1a9f91;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+#sub:hover {
+    background-color: #148d7b;
+}
+    </style>
+</head>
+<body>
+    <div class="form">
+        <h1 class="title">PAYMENT FORM</h1>
+        <form class="in">
+            <fieldset>
+                <legend class="legend">Personal Details</legend><br><br>
+                    First Name: <br><input type="text" placeholder="FirstName" required><br><br>
+                    Last Name: <br><input type="text" placeholder="Last Name"><br><br>
+                    Gender: <br>
+                    <input type="radio" name="gender" value="male" required> male
+                    <input type="radio" name="gender" value="female" required> female
+                    <br><br>
+                    Address: <br><input type="text" required><br><br>
+                    Email: <br><input type="email" placeholder="you@gmail.com" required><br><br>
+                    Number: <br><input type="text" placeholder="Enter 10-digit number" required><br><br>
+                    Pincode: <br><input type="text" required><br><br>
+            </fieldset>
+            <br><br> 
+            <fieldset>
+                <legend class="legend">Payment Info</legend><br><br>
+                    Card type: <br>
+                        <select name="card-type" required>
+                            <option value="Visa">Visa</option>
+                            <option value="Mastercard">Mastercard</option>
+                            <option value="Yes bank">Yes Bank</option>
+                            <option value="HDFC bank">HDFC Bank</option>
+                        </select>
+                    <br><br>
+                    Card No. : <br><input type="text" required><br><br>
+                    Expiry Date : <br><input type="date"><br><br>
+                    CVV : <br><input type="text" required><br><br>
+            </fieldset>
+            <br>
+            <button type="submit" id="sub">Pay Now </button>
+        </form>
+    </div>
+</body>
+</html>
